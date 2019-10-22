@@ -3,6 +3,9 @@ import java.util.Random;
 
 public class Cards {
 	private String[] Terrain_types =  new String[]{"Terrain_1","Terrain_2","Terrain_3"};
+	private String[] Food_type =  new String[]{"Berries" , "Fish", "Worms", "Small Animals", "Grain"};
+	
+	
 	private int Random_number(int cap)	 // generates number from 0 - cap
 	{
 		Random rand = new Random();
@@ -26,16 +29,18 @@ public class Cards {
 	{
 		Bird_name = Bird_names[Random_number(Bird_names.length - 1)];
 		Bird_point = Random_number(9);
-		Terrain_type = Terrain_types[Random_number(2)];
-		Food_cost = "NULL";
+		Terrain_type = Terrain_types[Random_number(Terrain_types.length -1)];
+		Food_cost = Food_type[Random_number(Food_type.length-1)];
 	}
-	public Cards(int index)// to force terrain type
+	
+	public Cards(int terrain_index, int food_index)// to force terrain type
 	{
 		Bird_name = Bird_names[Random_number(Bird_names.length - 1)];
 		Bird_point = Random_number(9);
-		Terrain_type = Terrain_types[index];
-		Food_cost = "NULL";
+		Terrain_type = Terrain_types[terrain_index];
+		Food_cost = Food_type[food_index];
 	}
+	
 	public String get_card_type()
 	{
 		return Terrain_type;

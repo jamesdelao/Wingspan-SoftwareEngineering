@@ -7,7 +7,7 @@ public class Player_board {
 	Board_tile[][] board = new Board_tile[3][5];
 	
 
-	public Player_board()
+	public Player_board()	// initialize game board
 	{
 		for(int i = 0;i<5;i++)
 		{
@@ -20,7 +20,7 @@ public class Player_board {
 		board[2] = third;
 		
 	}
-	public Player_board(int index)
+	public Player_board(int index)	// initializa all tiles as one terrain
 	{
 		for(int i = 0;i<5;i++)
 		{
@@ -33,7 +33,7 @@ public class Player_board {
 		board[2] = third;
 		
 	}
-	public void display_board()
+	public void display_board()	// display board
 	{
 		for(int i = 0;i<5;i++)
 		{
